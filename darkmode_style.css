@@ -3,7 +3,8 @@
     --text-color: #e0e0e0;
     --header-bg: #1f1f1f;
     --button-bg: #007bff;
-    --button-hover: #0056b3;
+    --link-color: #4da6ff;
+    --link-hover: #82cfff;
 }
 
 body.light-mode {
@@ -12,6 +13,9 @@ body.light-mode {
     --header-bg: #ffffff;
     --button-bg: #333;
     --button-hover: #555;
+    --link-color: #1a0dab;
+    --link-hover: #551a8b;
+
 }
 
 body {
@@ -20,6 +24,12 @@ body {
     color: var(--text-color);
     margin: 0;
     padding: 0;
+}
+a {
+    color: var(--link-color);
+}
+a:hover {
+    color: var(--link-hover);
 }
 
 header {
