@@ -9,55 +9,40 @@
 body.light-mode {
     --bg-color: #f9f9f9;
     --text-color: #111;
-    --header-bg: #fff;
+    --header-bg: #ffffff;
     --button-bg: #333;
     --button-hover: #555;
 }
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
 }
+
 header {
-    background-color: #451e1e;
-    color: white;
+    background-color: var(--header-bg);
+    color: var(--text-color);
     padding: 2rem;
     text-align: center;
 }
+
 header h1 {
     margin: 0;
     font-size: 2.5rem;
 }
-header p {
-    font-size: 1.2rem;
-}
+
 main {
     padding: 2rem;
-    max-width: 1000px;
-    margin: auto;
 }
-section.project {
-    background: white;
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-section.project h2 {
-    margin-top: 0;
-}
-footer {
-    text-align: center;
+
+.project {
     padding: 2rem;
-    background-color: #e9ecef;
+    border-bottom: 1px solid #2a2a2a;
 }
-.links a {
-    margin: 0 0.5rem;
-    text-decoration: none;
-    color: #007bff;
-}
+
 .project-flex {
     display: flex;
     flex-direction: row;
@@ -76,11 +61,11 @@ footer {
 
 .video-wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .video-wrapper iframe {
@@ -90,10 +75,11 @@ footer {
     width: 100%;
     height: 100%;
 }
+
 .read-more-button {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background-color: #451e1e;
+    background-color: var(--button-bg);
     color: white;
     border-radius: 8px;
     text-decoration: none;
@@ -102,5 +88,16 @@ footer {
 }
 
 .read-more-button:hover {
-    background-color: #2e1414;
+    background-color: var(--button-hover);
+}
+
+.theme-toggle {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: var(--button-bg);
+    color: white;
 }
