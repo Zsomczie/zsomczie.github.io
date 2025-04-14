@@ -51,6 +51,38 @@
             text-decoration: none;
             color: #007bff;
         }
+        .project-flex {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .project-text {
+            flex: 1 1 300px;
+        }
+
+        .project-video {
+            flex: 1 1 400px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body>
@@ -63,11 +95,22 @@
 <main>
 
     <section class="project">
-        <h2>Harmony in the Wild</h2>
-        <iframe width="892" height="502" src="https://www.youtube.com/embed/hoAvzAbgijs" title="Harmony in the Wild - Gameplay Trailer #2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <p><strong>Description:</strong> During a magical open-world adventure, you learn abilities from animal friends and glide, swim and leap across diverse landscapes uncovering the mystery of dying nature. As you progress, storybook pages turn, revealing your destiny.</p>
-        <p><strong>Role:</strong> Programming & design of game systems</p>
-        <p><a href="https://store.steampowered.com/app/3360850/Harmony_in_the_Wild/" target="_blank">View on Steam</a></p>
+        <div class="project-flex">
+            <div class="project-text">
+                <h2>Harmony in the Wild</h2>
+                <p><strong>Description:</strong> During a magical open-world adventure, you learn abilities from animal friends and glide, swim and leap across diverse landscapes uncovering the mystery of dying nature. As you progress, storybook pages turn, revealing your destiny.</p>
+                <p><strong>Role:</strong> Programming & design of game systems</p>
+                <p><a href="https://store.steampowered.com/app/3360850/Harmony_in_the_Wild/" target="_blank">View on Steam</a></p>
+            </div>
+            <div class="project-video">
+                <div class="video-wrapper">
+                    <iframe width="892" height="502" src="https://www.youtube.com/embed/hoAvzAbgijs"
+                            title="Harmony in the Wild - Gameplay Trailer #2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="project">
