@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #451e1e;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+header p {
+    font-size: 1.2rem;
+}
+main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+section.project {
+    background: white;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+section.project h2 {
+    margin-top: 0;
+}
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #e9ecef;
+}
+.links a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: #007bff;
+}
+.project-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.project-text {
+    flex: 1 1 300px;
+}
+
+.project-video {
+    flex: 1 1 400px;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
