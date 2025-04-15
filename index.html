@@ -1,113 +1,59 @@
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zsombor Faragó - Game Programmer Portfolio</title>
-    <link rel="stylesheet" href="darkmode_style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Zsombor Faragó – Game Programmer</title>
+    <link rel="stylesheet" href="darkmode_style.css"/>
 </head>
-<body>
+<body class="dark-mode">
 
 <header>
     <h1>Zsombor Faragó</h1>
     <p>Game Programmer</p>
-    <button id="themeToggle" class="theme-toggle" >Toggle Dark Mode </button>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
 </header>
+
 <nav>
     <a href="index.html" class="read-more-button">About Me</a>
-    <a href="projects.html" class="read-more-button">Projects</a>
+    <a href="projects.html" class="read-more-button">My Projects</a>
 </nav>
-<main>
 
-    <section class="project">
-        <div class="project-flex">
-            <div class="project-text">
-                <h2>Harmony in the Wild</h2>
-                <p><strong>Description:</strong> During a magical open-world adventure, you learn abilities from animal friends and glide, swim and leap across diverse landscapes uncovering the mystery of dying nature. As you progress, storybook pages turn, revealing your destiny.</p>
-                <p><strong>Role:</strong> Programming & design of game systems</p>
-                <p><a href="https://store.steampowered.com/app/3360850/Harmony_in_the_Wild/" target="_blank">View on Steam</a></p>
-                <p><a href="harmony.html" class="read-more-button">Read more →</a></p>
-            </div>
-            <div class="project-video">
-                <div class="video-wrapper">
-                    <iframe width="892" height="502" src="https://www.youtube.com/embed/hoAvzAbgijs"
-                            title="Harmony in the Wild - Gameplay Trailer #2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                    </iframe>
-                </div>
+<main class="container">
+    <section class="about">
+        <h2>About Me</h2>
+
+        <div class="about-content">
+            <img src="profile.png" alt="Zsombor Faragó" class="profile-pic" />
+
+            <div class="about-text">
+                <p>Hi! My name is Zsombor Faragó, 4th year Game Production student studying in Finland. I’m 22 years old and I’m from Hungary. I specialize in Game Programming and Game Design, as well as any kind of problem solving.</p>
+                <p>I love being in front of people and presenting or leading conversations. Video games have been my biggest hobby since I turned 4 years old, so I have quite a lot of experience when it comes to them. My favorite games currently include League of Legends, Terraria, Valorant, Life is Strange and lots of other diverse game titles that are absolutely brilliant.</p>
+                <p>I’ve been studying programming for 6,5 years, mainly in C# and C++ languages. My strongest points are coding and game design, as well as organizational, communication and team work skills, I’m very interested in all of these, and I’m motivated to improve them further.</p>
+                <p><a href="projects.html" class="check-projects-button" >Check out my Projects →</a></p>
             </div>
         </div>
+
     </section>
 
-    <section class="project">
-        <div class="project-flex">
-            <div class="project-text">
-        <h2>Lunchbox</h2>
-        <p><strong>Description:</strong> A rogue like game about a child that hates vegetables and he destroys them with fruit and other interesting weapons with the guidance of a potato who hates other type of vegetables (because potatoes are the superior vegetables).</p>
-        <p><strong>Role:</strong> Gameplay programming, AI and design</p>
-        <p><a href="https://zsomczie.itch.io/lunchbox" target="_blank">Play on itch.io</a></p>
-                <p><a href="lunchbox.html" class="read-more-button">Read more →</a></p>
-            </div>
-            <div class="project-video">
-                <div class="video-wrapper">
-                    <iframe width="399" height="226" src="https://www.youtube.com/embed/memtkW8_1sU" title="Short Gameplay Video" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-        </div>
+    <section class="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:zsomi.f@gmail.com">zsomi.f@gmail.com</a></p>
+        <p>
+            <a href="https://www.linkedin.com/">LinkedIn</a> |
+            <a href="https://github.com/">GitHub</a> |
+            <a href="https://zsomczie.itch.io/">Itch.io</a>
+        </p>
+        <p><a href="resume.pdf" target="_blank">View My Resume (PDF)</a></p>
     </section>
-
-    <section class="project">
-        <div class="project-flex">
-            <div class="project-text">
-        <h2>Blessing of the Forest</h2>
-        <p><strong>Description:</strong> Our group created a roguelike game called Blessing of the Forest, set in a forest that has been invaded by cultists that summon demons. The main character is a sacrificed child that the spirits of the forest turn into a mushroom and bless with the powers of the forest to defeat the cultists and stop the destruction they are causing in the forest. The mood of the game is a combination of cute and creepy.</p>
-        <p><strong>Role:</strong> Game Programming and Online programming</p>
-        <p><a href="https://zsomczie.itch.io/blessing-of-the-forest" target="_blank">Play on itch.io</a></p>
-                <p><a href="blessing.html" class="read-more-button">Read more →</a></p>
-            </div>
-            <div class="project-video">
-                <div class="video-wrapper">
-                    <iframe width="347" height="195" src="https://www.youtube.com/embed/C8Aaefwccn8" title="Blessing of the Forest Gameplay Trailer" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-
-                    </iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
 </main>
 
-<footer>
-    <div class="links" align="center">
-        <!-- Add your actual links in the hrefs below -->
-        <a href="#" target="_blank" >LinkedIn</a> |
-        <a href="#" target="_blank">GitHub</a> |
-        <a href="#" target="_blank">itch.io</a>
-        <!-- Optional: Resume link -->
-        <!-- Example: <a href="resume.pdf" target="_blank">Resume</a> -->
-    </div>
-</footer>
 <script>
-    const toggleButton = document.getElementById('themeToggle');
-    const currentTheme = localStorage.getItem('theme');
-
-    if (currentTheme === 'light') {
-        document.body.classList.add('light-mode');
-        toggleButton.textContent = 'Switch to Dark Mode';
-    }
-
-    toggleButton.addEventListener('click', () => {
+    function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
         document.body.classList.toggle('light-mode');
-        const theme = document.body.classList.contains('light-mode') ? 'light' : 'dark';
-        toggleButton.textContent = theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode';
-        localStorage.setItem('theme', theme);
-    });
+    }
 </script>
+
 </body>
 </html>

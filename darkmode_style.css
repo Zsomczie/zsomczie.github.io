@@ -3,6 +3,7 @@
     --text-color: #e0e0e0;
     --header-bg: #1f1f1f;
     --button-bg: #007bff;
+    --accent-color: #4da6ff;
     --link-color: #4da6ff;
     --link-hover: #82cfff;
     --main-bg: #121212;
@@ -13,6 +14,7 @@ body.light-mode {
     --text-color: #111;
     --header-bg: #ffffff;
     --button-bg: #333;
+    --accent-color: #1a0dab;
     --button-hover: #555;
     --link-color: #1a0dab;
     --link-hover: #551a8b;
@@ -125,6 +127,23 @@ main {
     background-color: var(--button-hover);
 }
 
+.check-projects-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    background-color: var(--button-bg);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.check-projects-button:hover {
+    background-color: var(--button-hover);
+}
+
+
 .theme-toggle {
     margin-top: 1rem;
     padding: 0.5rem 1rem;
@@ -160,4 +179,83 @@ nav a:hover {
 footer {
     text-align: center;
     padding-bottom: 30px;
+}
+
+/* ABOUT & CONTACT SECTIONS */
+.about {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.about h2, .contact h2 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.about p, .contact p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--accent-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+    #align-self: center;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Links in contact section */
+.contact a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* Optional: responsive tweaks */
+@media (max-width: 600px) {
+    .about, .contact {
+        padding: 1rem;
+    }
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
