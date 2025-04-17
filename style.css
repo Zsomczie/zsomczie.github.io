@@ -335,6 +335,29 @@ footer {
     margin-top: 1rem;
 }
 
+.skills {
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.skill-tag:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    cursor: default;
+}
+
 /* Optional: responsive tweaks */
 @media (max-width: 600px) {
     .about, .contact {
