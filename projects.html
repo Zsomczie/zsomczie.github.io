@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="profile.png" type="image/png">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zsombor Faragó - Game Programmer Portfolio</title>
@@ -12,23 +13,49 @@
 <header>
     <h1>Zsombor Faragó</h1>
     <p>Game Programmer</p>
-    <button id="themeToggle" class="theme-toggle" >Toggle Dark Mode </button>
+    <button id="themeToggle" class="theme-toggle" >Switch to Light Mode </button>
 </header>
 <nav>
     <a href="index.html" class="read-more-button">About Me</a>
     <a href="projects.html" class="read-more-button">My Projects</a>
 </nav>
 <main>
-
-    <section class="project">
+    <div class="filter-buttons">
+        <button onclick="filterProjects('all')">All</button>
+        <button onclick="filterProjects('Unity')">Unity</button>
+        <button onclick="filterProjects('Unreal')">Unreal Engine</button>
+    </div>
+    <p id="no-projects-message" style="display: none; text-align: center; margin-top: 2rem; color: var(--accent-color); font-weight: bold;">
+    </p>
+    <section class="project" data-category="Unity">
         <div class="project-flex">
             <div class="project-text">
                 <h2>Harmony in the Wild</h2>
                 <p><strong>Description:</strong> During a magical open-world adventure, you learn abilities from animal friends and glide, swim and leap across diverse landscapes uncovering the mystery of dying nature. As you progress, storybook pages turn, revealing your destiny.</p>
                 <p><strong>Role:</strong> Programming & design of game systems</p>
-                <p><a href="https://store.steampowered.com/app/3360850/Harmony_in_the_Wild/" target="_blank">View on Steam</a></p>
-                <p><a href="harmony.html" class="read-more-button">Read more →</a></p>
+                <p><strong>Game Engine:</strong> Unity</p>
+                <p><strong>Programming Language:</strong> C#</p>
+                <div class="read-more-container">
+                    <button class="read-more-toggle">Read More</button>
+                    <div class="read-more-content">
+                        <h2>About the Game</h2>
+                        <p>Harmony in the Wild is an open-world adventure where you play as a magical fox. You learn abilities from animal friends — gliding, swimming, smashing rocks, and more — as you uncover the story of a dying world brought back to life.</p>
+
+                        <h2>My Role</h2>
+                        <p>I worked on designing and programming the core game systems: movement mechanics, environmental interactions, and ability unlocking. A big focus was on seamless traversal and narrative integration.</p>
+
+                        <h2>Sample Code</h2>
+                        <pre><code>
+// Example code snippet
+void ExplodeMelon() {
+    Instantiate(explosionEffect, transform.position, Quaternion.identity);
+    DealAreaDamage();
+}
+    </code></pre>
+                    </div>
+                </div>
             </div>
+
             <div class="project-video">
                 <div class="video-wrapper">
                     <iframe width="892" height="502" src="https://www.youtube.com/embed/hoAvzAbgijs"
@@ -36,18 +63,40 @@
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                     </iframe>
                 </div>
+                <p class="checkout-paragraph"><a href="https://store.steampowered.com/app/3360850/Harmony_in_the_Wild/" target="_blank" class="checkout-button">View on Steam</a></p>
             </div>
         </div>
+
     </section>
 
-    <section class="project">
+    <section class="project" data-category="Unity">
         <div class="project-flex">
             <div class="project-text">
         <h2>Lunchbox</h2>
         <p><strong>Description:</strong> A rogue like game about a child that hates vegetables and he destroys them with fruit and other interesting weapons with the guidance of a potato who hates other type of vegetables (because potatoes are the superior vegetables).</p>
         <p><strong>Role:</strong> Gameplay programming, AI and design</p>
-        <p><a href="https://zsomczie.itch.io/lunchbox" target="_blank">Play on itch.io</a></p>
-                <p><a href="lunchbox.html" class="read-more-button">Read more →</a></p>
+                <p><strong>Game Engine:</strong> Unity</p>
+                <p><strong>Programming Language:</strong> C#</p>
+
+                <div class="read-more-container">
+                    <button class="read-more-toggle">Read More</button>
+                    <div class="read-more-content">
+                        <h2>About the Game</h2>
+                        <p>Harmony in the Wild is an open-world adventure where you play as a magical fox. You learn abilities from animal friends — gliding, swimming, smashing rocks, and more — as you uncover the story of a dying world brought back to life.</p>
+
+                        <h2>My Role</h2>
+                        <p>I worked on designing and programming the core game systems: movement mechanics, environmental interactions, and ability unlocking. A big focus was on seamless traversal and narrative integration.</p>
+
+                        <h2>Sample Code</h2>
+                        <pre><code>
+// Example code snippet
+void ExplodeMelon() {
+    Instantiate(explosionEffect, transform.position, Quaternion.identity);
+    DealAreaDamage();
+}
+    </code></pre>
+                    </div>
+                </div>
             </div>
             <div class="project-video">
                 <div class="video-wrapper">
@@ -56,18 +105,39 @@
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                     </iframe>
                 </div>
+                <p class="checkout-paragraph"><a href="https://zsomczie.itch.io/lunchbox" target="_blank" class="checkout-button">Play on itch.io</a></p>
             </div>
         </div>
+
     </section>
 
-    <section class="project">
+    <section class="project" data-category="Unity">
         <div class="project-flex">
             <div class="project-text">
         <h2>Blessing of the Forest</h2>
         <p><strong>Description:</strong> Our group created a roguelike game called Blessing of the Forest, set in a forest that has been invaded by cultists that summon demons. The main character is a sacrificed child that the spirits of the forest turn into a mushroom and bless with the powers of the forest to defeat the cultists and stop the destruction they are causing in the forest. The mood of the game is a combination of cute and creepy.</p>
         <p><strong>Role:</strong> Game Programming and Online programming</p>
-        <p><a href="https://zsomczie.itch.io/blessing-of-the-forest" target="_blank">Play on itch.io</a></p>
-                <p><a href="blessing.html" class="read-more-button">Read more →</a></p>
+                <p><strong>Game Engine:</strong> Unity</p>
+                <p><strong>Programming Language:</strong> C#</p>
+                <div class="read-more-container">
+                    <button class="read-more-toggle">Read More</button>
+                    <div class="read-more-content">
+                        <h2>About the Game</h2>
+                        <p>Harmony in the Wild is an open-world adventure where you play as a magical fox. You learn abilities from animal friends — gliding, swimming, smashing rocks, and more — as you uncover the story of a dying world brought back to life.</p>
+
+                        <h2>My Role</h2>
+                        <p>I worked on designing and programming the core game systems: movement mechanics, environmental interactions, and ability unlocking. A big focus was on seamless traversal and narrative integration.</p>
+
+                        <h2>Sample Code</h2>
+                        <pre><code>
+// Example code snippet
+void ExplodeMelon() {
+    Instantiate(explosionEffect, transform.position, Quaternion.identity);
+    DealAreaDamage();
+}
+                        </code></pre>
+                    </div>
+                </div>
             </div>
             <div class="project-video">
                 <div class="video-wrapper">
@@ -77,6 +147,7 @@
 
                     </iframe>
                 </div>
+                <p class="checkout-paragraph"><a href="https://zsomczie.itch.io/blessing-of-the-forest" target="_blank" class="checkout-button">Play on itch.io</a></p>
             </div>
         </div>
     </section>
@@ -86,9 +157,9 @@
 <footer>
     <div class="links" align="center">
         <!-- Add your actual links in the hrefs below -->
-        <a href="#" target="_blank" >LinkedIn</a> |
-        <a href="#" target="_blank">GitHub</a> |
-        <a href="#" target="_blank">itch.io</a>
+        <a href="https://www.linkedin.com/in/zsombor-faragó-2a803521b/" target="_blank" >LinkedIn</a> |
+        <a href="https://github.com/Zsomczie" target="_blank">GitHub</a> |
+        <a href="https://zsomczie.itch.io/" target="_blank">itch.io</a>
         <!-- Optional: Resume link -->
         <!-- Example: <a href="resume.pdf" target="_blank">Resume</a> -->
     </div>
@@ -108,6 +179,39 @@
         toggleButton.textContent = theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode';
         localStorage.setItem('theme', theme);
     });
+
+    function filterProjects(category) {
+        const projects = document.querySelectorAll('.project');
+        let visibleCount = 0;
+
+        projects.forEach(project => {
+            const matches = project.dataset.category === category || category === 'all';
+            project.style.display = matches ? 'block' : 'none';
+            if (matches) visibleCount++;
+        });
+
+        // Show/hide the "No projects" message
+        const message = document.getElementById('no-projects-message');
+        message.textContent = "No "+category + " projects found :(";
+        message.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        document.querySelectorAll('.read-more-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const isOpen = content.classList.contains('open');
+
+                content.classList.toggle('open');
+
+                if (isOpen) {
+                    button.textContent = 'Read More';
+                } else {
+                    button.textContent = 'Show Less';
+                }
+            });
+        });
 </script>
+<script data-goatcounter="https://8192.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

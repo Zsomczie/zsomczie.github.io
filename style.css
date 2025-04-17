@@ -7,6 +7,7 @@
     --link-color: #4da6ff;
     --link-hover: #82cfff;
     --main-bg: #121212;
+    --read-more-bg: #2a2a2a;
 }
 
 body.light-mode {
@@ -19,6 +20,7 @@ body.light-mode {
     --link-color: #1a0dab;
     --link-hover: #551a8b;
     --main-bg: #dadada;
+    --read-more-bg: #e0e0e0;
 }
 
 body {
@@ -83,7 +85,7 @@ main {
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -124,6 +126,25 @@ main {
 }
 
 .read-more-button:hover {
+    background-color: var(--button-hover);
+}
+
+.checkout-button {
+    padding: 0.5rem 1rem;
+    background-color: var(--button-bg);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.checkout-paragraph {
+    text-align: center;
+    margin-top: 2rem
+}
+
+.checkout-button:hover {
     background-color: var(--button-hover);
 }
 
@@ -183,7 +204,7 @@ footer {
 
 /* ABOUT & CONTACT SECTIONS */
 .about {
-    background-color: var(--bg-color);
+    background-color: var(--main-bg);
     color: var(--text-color);
     padding: 2rem;
     max-width: 1200px;
@@ -193,7 +214,7 @@ footer {
 }
 
 .contact {
-    background-color: var(--bg-color);
+    background-color: var(--main-bg);
     color: var(--text-color);
     padding: 2rem;
     max-width: 800px;
@@ -246,6 +267,70 @@ footer {
 .contact a:hover {
     color: var(--link-hover);
     text-decoration: underline;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.filter-buttons button {
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filter-buttons button:hover {
+    background-color: var(--accent-color);
+    color: #000;
+}
+
+.read-more-container {
+    margin-top: 2rem;
+}
+
+.read-more-toggle {
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.read-more-toggle:hover {
+    background-color: var(--button-hover);
+}
+
+.read-more-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease;
+    background-color: var(--read-more-bg);
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+}
+
+.read-more-content.open {
+    padding: 1rem;
+    max-height: 1000px; /* large enough to contain all content */
+}
+
+.read-more-content pre {
+    background-color: #1e1e1e;
+    color: #c3f3ff;
+    padding: 1rem;
+    overflow-x: auto;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
 }
 
 /* Optional: responsive tweaks */
